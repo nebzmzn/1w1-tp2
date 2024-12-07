@@ -3,83 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labo 8 - debut du tp2</title>
+    <title>TP2</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
+
 </head>
 <body>
     <header id="entete" class="entete">
+        <label id="burger" for="chk-burger">
+            <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-1&color=000" width="32" height="32">
+        <!-- </label>    -->
+        <input type="checkbox"  id="chk-burger">
+        <nav id="menu">
+            <a href="#entete">Acceuil</a>
+            <a href="#inscription">Inscription</a>
+            <a href="#tableau">Tableau</a>
+            <a href="#articles">Articles</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#video">Video</a>
+            <a href="#pied">Pied de page</a>
+        </nav>
+    </label>
         <div class="global">
-            <nav>
-                <a href="#entete">Acceuil</a>
-                <a href="#section-1">section-1</a>
-                <a href="#section-2">section-2</a>
-                <a href="#section-3">section-3</a>
-                <a href="#section-4">section-4</a>
-            </nav>
- 
             <div id="hero">
                 <div id="conteneur">
 
                     <div id="texte">
                         <h1>
-                            Les Voilliers
+                            La Galerie Bizarre
                         </h1>
                         <p>
                             Ce travail individuel consiste à créer un site web monopage composé de plusieurs sections distinctes,
                             chacune occupant une hauteur minimale de 100vh. Chaque section doit être navigable à partir d'un menu
                             fixe toujours visible en haut de la page.
-        
                         </p>
                         <p>
-                            Auteur: Nébile sossa Ferdinand
+                            Auteur: Nébile sossa Ferdinand - 582 -  1w1 - Mise en page Web
                         </p>
                         <p>
                             Date de remise: 18 novembre
                         </p>
+                        <p>
+                            College Maisonneuve
+                        </p>
                     </div>
 
-                    <div id="logo">
-                    <img src="image/logo.png" alt="">
+                    <div id="logo" > 
+                    <figure class="image moodboard">
+                    <img src="image/moodboard.png" alt="">
+                    </figure>
                     </div>
 
-                <!-- </div> -->
+                </div>
+            </div>
 
-            <!-- </div> -->
                 <!-- <div id="conteneur"> -->
                 
                     <div id="sous-titre">
                         <p>Département de techniques d'intégration multimédia - Collège de Maisonneuve - 3800 Sherbrooke Est, Montréal</p>
                     </div>
-                </div>
+                <!-- </div> -->
                 <!-- </div> -->
 
             </div>
         </div>
     </header>
-    <section id="section-1">
+    <section id="inscription">
         <div class="global">
-            <h2>section-1</h2>
+            <h2>Formulaire d'inscription</h2>
+            <p>Ceci est un formulaire où vous devez rentrer vos informations personnels</p>
+            <form action="" class="formulaire">
+                <fieldset><legend>Obligatoire</legend>
+                    <div id="formulaire">
+                        <!-- action sert a comuniquer avec un serveur -->
+                        <h3>Votre Nom</h3>
+                        <label for="nom">Nom</label>
+                        <input id="nom" type="text" placeholder="Entrez votre nom">
+                    
+                        <label for="prenom">prenom</label>
+                        <input id="prenom" type="text" placeholder="Entrez votre Prenom">
+                    </div>
+                    <div id="formulaire">
+                        <h3>Selectionner votre Sexe</h3>
+                        <label for="genre">Genre:</label>
+                        <input type="radio" id="homme" name="genre" value="Homme">
+                        <label for="homme">Homme</label>
+
+                        <input type="radio" id="femme" name="genre" value="Femme">
+                        <label for="femme">Femme</label>
+
+                        <input type="radio" id="autre" name="genre" value="Autre">
+                        <label for="autre">Autre</label>
+                    </div>
+                    <div id="formulaire">
+                        <h3>Entrer votre E-mail</h3>
+                        <label for="courriel">courriel</label>
+                        <input id="courriel" type="email" placeholder="Entrez votre courriel">
+
+                        <h3>Votre Mot de Passe</h3>
+                        <label for="mot-de-passe">Mot de passe</label>
+                        <input id="mot-de-passe" type="password" placeholder="Entrez votre mot de passe">
+                    </div>
+                    <div id="formulaire">
+                        <h3>Envoyer un message ici</h3>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <div id="formulaire">
+                        <button class="button is-link is-outlined">Envoyer</button>
+                        <button type="reset">Réinitialiser</button>
+                    </div>
+                </fieldset>
+            </form>
         </div>        
     </section>
-    <section id="section-2">
+
+
+
+
+    <section id="tableau">
         <div class="global">
-            <h2>section-2</h2>
+            <h2>Mes disponibilitées selon mon Horraire collegial 2024</h2>
+            <table class="tableau">
+                <caption>
+                    Horaire A2024
+                </caption>
+                
+                <!-- En-tête de la table -->
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                    </tr>
+                </thead>
+            
+                <!-- Corps de la table -->
+                <tbody>
+                    <!-- 8h -->
+                    <tr>
+                        <th>8h</th>
+                        <td rowspan="2">1W1</td>
+                        <td></td>
+                        <td rowspan="4">5W5</td>
+                        <td rowspan="11">maison</td>
+                        <td rowspan="3">1</td>
+                    </tr>
+                    <!-- 9h -->
+                    <tr>
+                        <th>9h</th>
+                        <td rowspan="3">1W1</td>
+                    </tr>
+                    <!-- 10h -->
+                    <tr>
+                        <th>10h</th>
+                        <td rowspan="9"></td>
+                    </tr>
+                    <!-- 11h -->
+                    <tr>
+                        <th>11h</th>
+                        <td rowspan="2">Dispo</td>
+                    </tr>
+                    <!-- 12h -->
+                    <tr>
+                        <th>12h</th>
+                        <td rowspan="2">Dispo</td>
+                        <td>Dispo</td>
+                    </tr>
+                    <!-- 13h -->
+                    <tr>
+                        <th>13h</th>
+                        <td rowspan="3">Reunion</td>
+                        <td rowspan="4">5W5</td>
+                    </tr>
+                    <!-- 14h -->
+                    <tr>
+                        <th>14h</th>
+                        <td rowspan="5"></td>
+                    </tr>
+                    <!-- 15h -->
+                    <tr>
+                        <th>15h</th>
+                    </tr>
+                    <!-- 16h -->
+                    <tr>
+                        <th>16h</th>
+                        <td rowspan="2">1W1</td>
+                    </tr>
+                    <!-- 17h -->
+                    <tr>
+                        <th>17h</th>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <!-- 18h -->
+                    <tr>
+                        <th>18h</th>
+                    </tr>
+                </tbody>
+            
+                <!-- Pied de page  -->
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Mon horraire TIM</td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>        
     </section>
-    <section id="section-3">
+
+
+    <section id="articles" >
         <div class="global">
-            <h2>section-3</h2>
+            <h2>Les 4 peintures les plus chères a acheter</h2>
+
+                <article class="article">
+                    <figure class="article__figure">
+                        <img src="image/article/image-article.jpg" alt="Les Joueurs de cartes de Paul Cézanne">
+                        <figcaption>https://fr.wikipedia.org/wiki/Les_Joueurs_de_cartes_(C%C3%A9zanne)</figcaption>
+                    </figure>
+                    <div class="image-text-container">
+                        <img src="image/decors/article_decor.png" alt="Décor">
+                        <p>Acheté durant une vente privée de George Embiricos par la famille princière du Qatar6.</p>
+                    </div> 
+                </article>
+
+
+                <article class="article">
+                    <figure class="article__figure">
+                        <img src="image/article/image-article-2.jpg" alt="Quand te maries-tu ?">
+                        <figcaption>https://fr.wikipedia.org/wiki/Quand_te_maries-tu_%3F</figcaption>
+                    </figure>
+                    <div class="image-text-container">
+                        <img src="image/decors/article_decor.png" alt="Décor">
+                        <p>Vendu pour 7 francs à la mort de l'artiste, il a été acheté, en 2015, par l'émir du Qatar pour 300 millions de dollars, à la famille Gauguin.</p>
+                    </div> 
+                </article>
+
+
+                <article class="article">
+                    <figure class="article__figure">
+                        <img src="image/article/image-article-3.jpg" alt="Salvator Mundi">
+                        <figcaption>
+                            https://fr.wikipedia.org/wiki/Salvator_Mundi_(version_Cook)</figcaption>
+                    </figure>
+                    <div class="article__p">
+                        <div class="image-text-container">
+                            <img src="image/decors/article_decor.png" alt="Décor">
+                            <p>Vendu dans une vente aux enchères chez Christie's à New York2. Acheté par Mohamed ben Salman3, Prince Heritier d'Arabie Saoudite</p>
+                        </div>                       
+                    </div>        
+                </article>
+
+
+                <article class="article">
+                    <figure class="article__figure">
+                        <img src="image/article/image-article-4.jpg" alt="L'origine du monde">
+                        <figcaption>
+                            https://fr.wikipedia.org/wiki/L%27Origine_du_monde
+                        </figcaption>
+                    </figure>
+                    <div class="article__p">
+                        <div class="image-text-container">
+                            <img src="image/decors/article_decor.png" alt="Décor">
+                            <p>Remis en dation en payement au trésor français pour le règlement des droits de succession de Sylvia Bataille-Lacan en 1993</p>
+                        </div>                       
+                    </div>
+                </article>
+                                
+            </section>
+
         </div>        
     </section>
-    <section id="section-4">
+
+
+    <section id="galerie">
         <div class="global">
-            <h2>section-4</h2>
+            <h2>Galerie</h2>
+            <section class="image__galerie">
+                <div class="image__conteneur">
+                    <img src="image/galerie/image-1.jpg" alt="Image 1" class="vignette">
+                    <img src="image/galerie/image-2.png" alt="Image 2" class="vignette">
+                    <img src="image/galerie/image-3.jpg" alt="Image 3" class="vignette">
+                    <img src="image/galerie/image-4.jpg" alt="Image 4" class="vignette">
+                    <img src="image/galerie/image-5.jpg" alt="Image 5" class="vignette">
+                    <img src="image/galerie/image-6.jpg" alt="Image 6" class="vignette">
+                </div>
+            </section>
+            
+        </div>        
+    </section>
+    <section id="video">
+        <div class="global">
+            <h2>Video</h2>
+            <article> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BcuuIwbtiOQ?si=D-9yCI8aohSZx6w3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio placeat, reprehenderit, hic veniam rem quasi quam quas nobis rerum exercitationem eveniet numquam beatae modi dolor? Ducimus corrupti dignissimos vel?</p>
+            </article>
+           
         </div>        
     </section>
  
 <section id="pied" class="pied">
-    <div class="global"></div>
+    <div class="global">
+        <h2>Pied de page</h2>
+    </div>
 </section>
    
 </body>
